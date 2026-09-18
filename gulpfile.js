@@ -7,6 +7,8 @@ const terser = require('gulp-terser');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 
+//Tasks
+//Lab1
 function html()
 {
     return src('src/app/index.html')
@@ -30,7 +32,7 @@ function css()
 function js()
 {
     return src('src/app/js/**/*.js')
-    .pipe(concat('all.js'))
+    .pipe(concat('main.js'))
     .pipe(terser())
 
     .pipe(dest('dist/js'))
@@ -40,7 +42,7 @@ function js()
 async function imgs() {
   const imagemin = (await import('gulp-imagemin')).default;
 
-  return src('src/app/imgs/**/*')
+  return src('src/app/imgs/**/*', { encoding: false })
     .pipe(imagemin())
 
     .pipe(dest('dist/imgs'))
@@ -55,15 +57,29 @@ function browser()
         notify: false
     });
 }
+//Lab2
+function copyBootstrapCss()
+{
+  return src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+    .pipe(dest('dist/css'));
+}
 
+function copyBootstrapJS()
+{
+  return src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+    .pipe(dest('dist/js'));
+}
+
+//Watcher
 function watcher()
 {
-    watch('src/app/html/**/*.html', html);
-    watch('src/app/css/**/*.scss', css);
+    watch('src/app/**/*.html', html);
+    watch('src/app/scss/**/*.scss', css);
     watch('src/app/js/**/*.js', js);
     watch('src/app/imgs/**/*', imgs);
 }
 
+//Export
 exports.default = parallel
 (
     html,
@@ -71,5 +87,7 @@ exports.default = parallel
     js,
     imgs,
     browser,
+    copyBootstrapCss,
+    copyBootstrapJS,
     watcher
 )
