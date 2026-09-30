@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-
         <meta charset="UTF-8">
         <title>PM_22_08</title>
 
         <!--Style-->
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/index.min.css">
     </head>
-    <body>
-        <!--Header-->
-        @@include('components/header.html')
+    <body style="padding: 20px;">
+            <!--Header-->
+            @@include('components/header.html')
 
-        <!--Main-->
-        <main>
-            <p>Temp</p>
-            <p>TEMP2</p>
-            <p>temp2</p>
-            <p>temp2</p>
-            <button class="test_button">Push</button>
-            <img src="imgs/img1.jpg">
-        </main>
+            <div class="row g-0">
+                <div class="col-4">
+                    @@include('components/aside.html')
+                </div>
+                <div class="col-8">
+                    @@include('components/main.html')
+                </div>
+            </div>
 
         <!--JavaScript-->
         <script src="js/bootstrap.bundle.min.js"></script>
