@@ -21,7 +21,7 @@ function html()
 
 function css() {
   return src('src/app/scss/style.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ includePaths: ['src/app/scss'] }).on('error', sass.logError))
     .pipe(GulpCleanCss())
     .pipe(rename({ basename: 'index', suffix: '.min' }))
     .pipe(dest('dist/css'))

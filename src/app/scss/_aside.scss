@@ -1,0 +1,57 @@
+.resume-aside {
+  background-color: $aside-bg;
+
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .aside-section {
+    margin-bottom: $base-padding * 2; 
+
+    .custom-progress {
+      @include style-progress(6px, 40%);
+
+      .progress-bar {
+      background-color: $main-dark;
+      
+      &.w-60 { width: 60%; }
+      &.w-70 { width: 70%; }
+      &.w-80 { width: 80%; }
+      &.w-90 { width: 90%; }
+      }
+
+    }
+  }
+
+  .icon-box {
+    background-color: $main-dark;
+    width: 25px;
+    height: 25px;
+  }
+
+  .lang-badge {
+    @extend %bordered-box;
+    display: block;
+    padding: ($base-padding / 2) 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.65rem;
+  }
+
+  .aside-hr {
+    border-top: 1px solid $border-color;
+    opacity: 1;
+    margin: ($base-padding * 1.5) 0;
+  }
+
+  .skill-label {
+    font-size: 0.8rem;
+  }
+
+  .icon-img {
+    object-fit: contain;
+    width: 16px;
+    height: 16px;
+  }
+}

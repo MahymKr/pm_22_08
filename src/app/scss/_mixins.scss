@@ -1,0 +1,16 @@
+%bordered-box {
+  border: 2px solid $border-color;
+  background-color: $white;
+}
+
+@mixin style-progress($bar-height: 6px, $width-percent: 40%) {
+  width: $width-percent;
+  height: $bar-height;
+  background-color: $aside-bg;
+  border: 1px solid $border-color;
+  border-radius: 0;
+  
+  .progress-bar {
+    background-color: $main-dark;
+  }
+}

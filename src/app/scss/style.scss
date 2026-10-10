@@ -1,7 +1,10 @@
-@use 'header';
-@use 'aside';
-@use 'main';
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'aside';
+@import 'main';
 
-body, p, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Raleway', sans-serif !important;
+body {
+  font-family: $font-family-base;
+  color: $main-dark;
 }

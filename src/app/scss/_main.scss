@@ -1,0 +1,23 @@
+.resume-main {
+  p {
+    margin-bottom: 0px;
+  }
+
+  .icon-box {
+    background-color: $main-dark;
+    width: 25px;
+    height: 25px;
+  }
+
+  .icon-img {
+    object-fit: contain;
+    width: 16px;
+    height: 16px;
+  }
+
+  .main-hr {
+    border-top: 1px solid $main-dark;
+    opacity: 1;
+    margin: 12px 0;
+  }
+}
