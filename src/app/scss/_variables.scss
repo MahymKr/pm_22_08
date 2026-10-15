@@ -6,15 +6,3 @@ $white: #ffffff;
 $font-family-base: 'Raleway', sans-serif;
 
 $base-padding: 8px;
-
-@mixin custom-progress($height: 6px) {
-  height: $height;
-  background-color: $bg-sidebar;
-  border: $border-width solid $dark-color;
-  padding: 1px;
-  
-  .progress-bar {
-    background-color: $dark-color;
-    height: 100%;
-  }
-}
