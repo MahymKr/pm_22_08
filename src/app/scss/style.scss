@@ -4,7 +4,21 @@
 @import 'aside';
 @import 'main';
 
-body {
-  font-family: $font-family-base;
-  color: $main-dark;
+.page-bg{
+  background-color: rgb(240,240,240);
+  padding: 40px 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-wrapper{
+  width: 100%;
+  max-width: 960px;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 4px;
 }
