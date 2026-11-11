@@ -20,4 +20,15 @@
     opacity: 1;
     margin: 12px 0;
   }
+
+  //Lab 4
+  .main-toggle-arrow {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: $main-dark;
+
+    &.arrow-rotated {
+      transform: rotate(-180deg);
+    }
+  }
 }

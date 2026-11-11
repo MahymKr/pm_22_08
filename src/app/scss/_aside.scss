@@ -33,7 +33,7 @@
   .lang-badge {
     @extend %bordered-box;
     display: block;
-    padding: ($base-padding / 2) 0;
+    padding: $base-padding / 2;
     background-color: transparent;
     text-align: center;
     font-weight: 600;
@@ -43,7 +43,7 @@
   .aside-hr {
     border-top: 1px solid $border-color;
     opacity: 1;
-    margin: ($base-padding * 1.5) 0;
+    margin: $base-padding * 1.5;
   }
 
   .skill-label {
@@ -54,5 +54,19 @@
     object-fit: contain;
     width: 16px;
     height: 16px;
+  }
+
+  //Lab 4
+  .aside-toggle-arrow {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    color: $main-dark;
+
+    &.arrow-rotated {
+      transform: rotate(-180deg);
+    }
   }
 }
