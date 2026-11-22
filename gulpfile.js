@@ -48,6 +48,12 @@ async function imgs() {
     .pipe(browserSync.stream());
 }
 
+function json() {
+    return src('src/app/data.json')
+        .pipe(dest('dist'))
+        .pipe(browserSync.stream());
+}
+
 function browser()
 {
     browserSync.init(
@@ -76,6 +82,7 @@ function watcher()
     watch('src/app/scss/**/*.scss', css);
     watch('src/app/js/**/*.js', js);
     watch('src/app/imgs/**/*', imgs);
+    watch('src/app/**/*.json', json);
 }
 
 //Export
@@ -85,6 +92,7 @@ exports.default = parallel
     css,
     js,
     imgs,
+    json,
     browser,
     copyBootstrapCss,
     copyBootstrapJS,

@@ -1,0 +1,24 @@
+{
+    "person": {
+        "firstName": "NOEL",
+        "lastName": "TAYLOR",
+        "role": "GRAPHIC & WEB DESIGNER"
+    },
+    "projects": [
+        {
+            "title": "PORTFOLIO WEBSITE V1",
+            "period": "2024",
+            "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."
+        },
+        {
+            "title": "TASK MANAGER APP",
+            "period": "2023",
+            "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."
+        },
+        {
+            "title": "LANDING PAGE REDESIGN",
+            "period": "2023",
+            "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."
+        }
+    ]
+}
